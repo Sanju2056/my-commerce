@@ -1,7 +1,10 @@
-import Logo from './logo.png'
-import Icon from './icon.png'
-import Cart from './cart.png'
-import Heart from './heart.png'
-import Car from './car.png'
-import Search from './search.svg'
-export {Logo, Icon , Cart, Heart, Car, Search}
+import Logo from "./logo.png";
+import Icon from "./icon.png";
+import Cart from "./cart.png";
+import Heart from "./heart.png";
+import Car from "./car.png";
+import Search from "./search.svg";
+import BgImage from "./bg.jpg";
+import P from "./p.avif";
+import bg from "./bg.avif";
+export { Logo, Icon, Cart, Heart, Car, Search, BgImage, P, bg };
