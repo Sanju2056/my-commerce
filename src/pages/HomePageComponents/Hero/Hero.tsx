@@ -1,6 +1,6 @@
-import { bg } from "../../assets/images";
+import { bg } from "../../../assets/images";
 
-const Header = () => {
+const Hero = () => {
   return (
     <section
       className="w-full py-52 bg-cover bg-center bg-no-repeat relative"
@@ -34,4 +34,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Hero;

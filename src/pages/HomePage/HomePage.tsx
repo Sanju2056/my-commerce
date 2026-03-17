@@ -1,9 +1,14 @@
-import Header from "../Header/Header"
+import FeatureProduct from "../HomePageComponents/FeaturedProduct/FeatureProduct"
+import Hero from "../HomePageComponents/Hero/Hero"
 
 const HomePage = () => {
   return (
-    <div>
-      <Header/>
+    <div className="w-full">
+      <Hero/>
+      <div className="flex flex-col">
+        <FeatureProduct/>
+        <div></div>
+      </div>
     </div>
   )
 }
