@@ -3,7 +3,7 @@ import { products } from "../../../static";
 const FeatureProduct = () => {
   return (
     <div className="py-14  px-5 md:px-12 lg:py-20 lg:px-24 bg-gray-100">
-      <div className="flex flex-col md:flex-row md:justify-between   md:items-center mb-7 md:mb-10">
+      <div className="flex flex-col md:flex-row md:justify-between   md:items-top mb-7 md:mb-10">
         <h2 className="text-2xl lg:text-3xl font-bold mb-1 md:mb-0">
           Featured Products
         </h2>
