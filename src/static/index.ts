@@ -83,20 +83,6 @@ const products = [
     description: "High precision with RGB lighting",
     price: 45.99,
     image: Product,
-  },
-  {
-    id: 9,
-    name: "Water Bottle",
-    description: "Insulated stainless steel bottle",
-    price: 19.99,
-    image: Product,
-  },
-  {
-    id: 10,
-    name: "Desk Lamp",
-    description: "LED lamp with adjustable brightness",
-    price: 34.99,
-    image: Product,
-  },
+  }
 ];
 export { navBarData, headerData, products };
