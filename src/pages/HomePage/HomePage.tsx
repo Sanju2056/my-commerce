@@ -1,3 +1,4 @@
+import Banner from "../HomePageComponents/Banner/Banner"
 import FeatureProduct from "../HomePageComponents/FeaturedProduct/FeatureProduct"
 import Hero from "../HomePageComponents/Hero/Hero"
 import MostPopularProduct from "../HomePageComponents/MostPopularProduct/MostPopularProduct"
@@ -11,6 +12,7 @@ const HomePage = () => {
         <FeatureProduct/>
         <RangeofCategories/>
         <MostPopularProduct/>
+        <Banner/>
         <div></div>
       </div>
     </div>

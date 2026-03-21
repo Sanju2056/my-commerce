@@ -12,4 +12,5 @@ import BedroomTmage from "./bedroom.avif";
 import diningImage from "./dining.avif";
 import LivingImage from "./living.avif";
 import SofaImage from "./sofa.avif";
-export { Logo, Icon, Cart, Heart, Car, Search, BgImage, P, bg, Product, BedroomTmage, diningImage, LivingImage, SofaImage };
+import BannerImage from "./banner.avif"
+export {BannerImage,Logo, Icon, Cart, Heart, Car, Search, BgImage, P, bg, Product, BedroomTmage, diningImage, LivingImage, SofaImage };

@@ -5,8 +5,7 @@ const MostPopularProduct = () => {
   return (
     <div>
       <div className="pb-14 px-5 md:px-12 lg:pb-20 lg:px-24 ">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-top mb-7 md:mb-10">
+        <div className="flex flex-col md:flex-row gap-4 md:justify-between md:items-top mb-7 md:mb-10">
           <div className="flex flex-col gap-3">
             <h2 className="text-2xl lg:text-3xl font-bold">
               Most Popular Products
@@ -18,7 +17,7 @@ const MostPopularProduct = () => {
             </p>
           </div>
 
-          <div className="flex justify-center gap-2 h-max px-10 text-lg cursor-pointer py-3 rounded-[24px] items-center bg-[#282828] text-white font-medium">
+          <div className="flex justify-center gap-2 w-max h-max px-10 text-lg cursor-pointer py-3 rounded-[24px] items-center bg-[#282828] text-white font-medium">
             View All
             <ArrowRight className="size-4" />
           </div>
