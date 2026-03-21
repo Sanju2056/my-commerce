@@ -13,4 +13,8 @@ import diningImage from "./dining.avif";
 import LivingImage from "./living.avif";
 import SofaImage from "./sofa.avif";
 import BannerImage from "./banner.avif"
-export {BannerImage,Logo, Icon, Cart, Heart, Car, Search, BgImage, P, bg, Product, BedroomTmage, diningImage, LivingImage, SofaImage };
+import VisaImage from "./Visa-Logo-Free-Download-PNG.png"
+import MasterCardImage from "./MasterCard_logo.png"
+import PayPalImage from "./paypal-logo-png-512.png"
+import ApplePayImage from "./apple-pay-card5428.jpg"
+export {BannerImage,Logo, Icon, Cart, Heart, Car, Search, BgImage, P, bg, Product, BedroomTmage, diningImage, LivingImage, SofaImage, VisaImage, MasterCardImage, PayPalImage, ApplePayImage };
