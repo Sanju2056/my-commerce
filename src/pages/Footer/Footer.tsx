@@ -16,13 +16,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#f7f7f7]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12">
-
-        {/* Top Section */}
+    <footer className="bg-gray-100 pb-14 px-5 md:px-12 lg:pb-20 lg:px-24">
+      <div className=" mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          
-          {/* Links */}
           <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
             {footerData.map((item, index) => (
               <div key={index}>
@@ -42,7 +38,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Newsletter */}
           <div>
             <h4 className="font-semibold mb-4">Get in the Know</h4>
 
@@ -63,7 +58,6 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="mt-12 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          
           {/* Left */}
           <div className="text-sm text-gray-600 text-center md:text-left">
             © 2026 NorthStar eCommerce. All rights reserved.
@@ -91,7 +85,6 @@ const Footer = () => {
             ))}
           </div>
         </div>
-
       </div>
     </footer>
   );

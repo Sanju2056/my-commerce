@@ -1,4 +1,6 @@
 import Banner from "../HomePageComponents/Banner/Banner"
+import BlogContainer from "../HomePageComponents/BlogContainer/BlogContainer"
+import FAQ from "../HomePageComponents/FAQ/Faq"
 import FeatureProduct from "../HomePageComponents/FeaturedProduct/FeatureProduct"
 import Hero from "../HomePageComponents/Hero/Hero"
 import MostPopularProduct from "../HomePageComponents/MostPopularProduct/MostPopularProduct"
@@ -13,7 +15,8 @@ const HomePage = () => {
         <RangeofCategories/>
         <MostPopularProduct/>
         <Banner/>
-        <div></div>
+        <BlogContainer/>
+        <FAQ/>
       </div>
     </div>
   )
