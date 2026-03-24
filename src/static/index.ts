@@ -23,7 +23,7 @@ const navBarData = [
 ];
 const headerData = [
   { title: "Help", path: "/help" },
-  { title: "Sign Up", path: "/sign-in" },
+  { title: "Sign Up", path: "/signup" },
   { title: "Log In", path: "/login" },
 ];
 

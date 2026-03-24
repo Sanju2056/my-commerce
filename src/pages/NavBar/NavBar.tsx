@@ -44,6 +44,7 @@ const NavBar = () => {
                 <a
                   href={item.path}
                   className="hover:text-blue-600 transition-colors"
+                  onClick={() => console.log(item.title)}
                 >
                   {item.title}
                 </a>
