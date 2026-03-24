@@ -5,6 +5,8 @@ import {
   PhoneImage3,
   PhoneImage4,
 } from "../../assets/images";
+import DescriptionPage from "./DescriptionPage";
+import ReviewSection from "./ReviewPage";
 
 function ProductDetailPage() {
   const images = [PhoneImage1, PhoneImage2, PhoneImage3, PhoneImage4];
@@ -23,6 +25,18 @@ function ProductDetailPage() {
   const handleMouseLeave = () => {
     setZoomStyle({});
   };
+
+  const [activeTab, setActiveTab] = useState("Description");
+  const renderTabContent = [
+    {
+      name: "Description",
+      content: <DescriptionPage />,
+    },
+    {
+      name: "Reviews",
+      content: <ReviewSection />,
+    },
+  ];
 
   return (
     <div className="bg-white text-gray-800 antialiased">
@@ -195,46 +209,28 @@ function ProductDetailPage() {
       <section className="mt-12 md:mt-16 bg-gray-50 border-t">
         <div className="container mx-auto p-4 md:p-8">
           <div className="border-b mb-6 flex gap-6 text-lg font-medium">
-            <button className="pb-3 border-b-2 border-gray-900 text-gray-900">
-              Description
-            </button>
-            <button className="pb-3 border-b-2 border-transparent text-gray-500 hover:text-gray-900">
-              Reviews
-            </button>
+            {renderTabContent.map((tab) => (
+              <button
+                key={tab.name}
+                onClick={() => setActiveTab(tab.name)}
+                className={`pb-3 border-b-2 ${
+                  activeTab === tab.name
+                    ? "border-gray-900 text-gray-900"
+                    : "border-transparent text-gray-500 hover:text-gray-900"
+                }`}
+              >
+                {tab.name}
+              </button>
+            ))}
           </div>
-          <div className="text-gray-600 space-y-4 max-w-4xl">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-            </p>
-            <ul className="list-disc list-outside ml-5 space-y-2">
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </li>
-            </ul>
-          </div>
+          {renderTabContent.map((tab) => (
+            <div
+              key={tab.name}
+              className={`${activeTab === tab.name ? "block" : "hidden"}`}
+            >
+              {tab.content}
+            </div>
+          ))}
         </div>
       </section>
     </div>
