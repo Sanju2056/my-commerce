@@ -20,6 +20,10 @@ import ApplePayImage from "./apple-pay-card5428.jpg";
 import BlogImage1 from "./i1.avif";
 import BlogImage2 from "./i2.avif";
 import BlogImage3 from "./i3.avif";
+import PhoneImage1 from "./phone1.avif";
+import PhoneImage2 from "./phone2.avif";
+import PhoneImage3 from "./phone3.avif";
+import PhoneImage4 from "./phone4.avif";
 export {
   BannerImage,
   Logo,
@@ -43,4 +47,8 @@ export {
   MasterCardImage,
   PayPalImage,
   ApplePayImage,
+  PhoneImage1,
+  PhoneImage2,
+  PhoneImage3,
+  PhoneImage4,
 };
