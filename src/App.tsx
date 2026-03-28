@@ -13,15 +13,23 @@ import About from "./pages/About/About";
 import Help from "./pages/Help/Help";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import BlogDetailPage from "./pages/BlogsDetailPage/BlogDetailPage";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data));
+  }, []);
+  // console.log(products);
   return (
     <div className="w-full">
       <NavBar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products" element={<ProductPage />} />
+          <Route path="/products" element={<ProductPage products={products}/>} />
           {/* <Route path="/products" element={<ProductDetailPage />} /> */}
 
           <Route path="/blog" element={<Blog />} />
