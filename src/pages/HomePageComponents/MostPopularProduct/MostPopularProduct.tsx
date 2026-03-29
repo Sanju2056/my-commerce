@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { products } from "../../../static";
+import { Link } from "react-router-dom";
 
 const MostPopularProduct = () => {
   return (
@@ -17,10 +18,10 @@ const MostPopularProduct = () => {
             </p>
           </div>
 
-          <div className="flex justify-center gap-2 w-max h-max px-10 text-lg cursor-pointer py-3 rounded-[24px] items-center bg-[#282828] text-white font-medium">
+          <Link to="/products" className="flex justify-center gap-2 w-max h-max px-10 text-lg cursor-pointer py-3 rounded-[24px] items-center bg-[#282828] text-white font-medium">
             View All
             <ArrowRight className="size-4" />
-          </div>
+          </Link>
         </div>
 
         {/* Products Grid */}
