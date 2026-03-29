@@ -14,6 +14,7 @@ import Help from "./pages/Help/Help";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import BlogDetailPage from "./pages/BlogsDetailPage/BlogDetailPage";
 import { useEffect, useState } from "react";
+import ScrollToTop from "./pages/ScrollToTop";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -27,6 +28,7 @@ function App() {
     <div className="w-full">
       <NavBar />
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductPage products={products}/>} />
