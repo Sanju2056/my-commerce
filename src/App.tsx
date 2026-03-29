@@ -9,7 +9,6 @@ import Blog from "./pages/Blogs/Blog";
 import Contact from "./pages/Contact/Contact";
 import LoginPage from "./pages/LoginScreen/LoginPage";
 import Signup from "./pages/SignUpPage/Signup";
-import About from "./pages/About/About";
 import Help from "./pages/Help/Help";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import BlogDetailPage from "./pages/Blogs/BlogDetailPage";
@@ -41,7 +40,6 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/help" element={<Help />} />
-          <Route path="/about" element={<About />} />
 
           {/* <Route path="/product/:id" element={<ProductDetailPage />} /> */}
         </Routes>
