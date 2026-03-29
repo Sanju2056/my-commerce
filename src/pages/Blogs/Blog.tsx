@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { blogs } from "../../static";
+import { Link } from "react-router-dom";
 const Blog = () => {
   const no_of_post = 6;
   const [visibleBlogs, setVisibleBlogs] = useState(no_of_post);
@@ -13,20 +14,20 @@ const Blog = () => {
 
   return (
     <div className="bg-white  text-gray-800 antialiased">
-      <div className=" mx-auto px-4 py-12 container">
-        <section className="mb-20">
+      <div className=" mx-auto px-4 py-8 md:py-12 container">
+        <section className="mb-10">
           <h2 className="text-2xl font-bold mb-8 text-gray-700">
             Our Featured Posts
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
-            <div className="aspect-[16/10] bg-gray-300 rounded-3xl">
+          <div className="grid grid-cols-1 gap-8 items-center">
+            <Link to={`/blog/${posts[0].id}`} className="rounded-lg">
               <img
                 src={posts[0].thumbnail}
                 alt={posts[0].title}
-                className="w-full h-full object-cover rounded-3xl"
+                className="w-full lg:h-[600px] object-cover rounded-lg"
               />
-            </div>
+            </Link>
             <div className="space-y-4">
               <h1 className="text-2xl md:text-3xl font-bold leading-tight text-gray-900">
                 {posts[0].title}
@@ -50,7 +51,7 @@ const Blog = () => {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-12 border-t-[1px] border-gray-300  pt-10">
           <h2 className="text-2xl font-bold mb-8 text-gray-700">
             Latest Posts
           </h2>
@@ -59,31 +60,33 @@ const Blog = () => {
             {isloading ? (
               <div>Loading...</div>
             ) : (
-              posts.map((post, index) => (
-                <div key={index} className="space-y-4">
-                  <div className="aspect-[4/3] bg-gray-300 rounded-2xl">
-                    <img
-                      src={post.thumbnail}
-                      alt={post.title}
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
-                  </div>
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-gray-400">
-                    <div className="w-5 h-5 bg-gray-300 rounded-full">
+              posts.map((post) => (
+                <Link
+                  key={post.id}
+                  to={`/blog/${post.id}`}
+                  className="group block bg-gray-50 rounded-lg overflow-hidden shadow hover:shadow-md transition"
+                >
+                  <img
+                    src={post.thumbnail}
+                    alt={post.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="p-4 flex flex-col gap-1">
+                    <h3 className="font-semibold text-gray-800 group-hover:text-blue-600">
+                      {post.title}
+                    </h3>
+                    <div className="flex items-center gap-2">
                       <img
                         src={post.userProfile}
                         alt={post.userName}
-                        className="w-full h-full object-cover rounded-full"
+                        className="w-5 h-5 rounded-full inline-block object-cover"
                       />
+                      <p className="text-sm text-gray-500 mt-1 ">
+                        {post.userName}
+                      </p>
                     </div>
-                    <span>
-                      {post.userName} • {post.date}
-                    </span>
                   </div>
-                  <h3 className="font-bold text-sm leading-snug text-gray-800 line-clamp-2">
-                    {post.title}
-                  </h3>
-                </div>
+                </Link>
               ))
             )}
           </div>

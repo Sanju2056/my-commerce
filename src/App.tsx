@@ -12,7 +12,7 @@ import Signup from "./pages/SignUpPage/Signup";
 import About from "./pages/About/About";
 import Help from "./pages/Help/Help";
 import ProductPage from "./pages/ProductPage/ProductPage";
-import BlogDetailPage from "./pages/BlogsDetailPage/BlogDetailPage";
+import BlogDetailPage from "./pages/Blogs/BlogDetailPage";
 import { useEffect, useState } from "react";
 import ScrollToTop from "./pages/ScrollToTop";
 
@@ -35,7 +35,7 @@ function App() {
           {/* <Route path="/products" element={<ProductDetailPage />} /> */}
 
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blogdetailpage" element={<BlogDetailPage />} />
+          <Route path="/blog/:id" element={<BlogDetailPage />} />
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LoginPage />} />
