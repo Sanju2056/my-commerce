@@ -24,6 +24,7 @@ import PhoneImage1 from "./phone1.avif";
 import PhoneImage2 from "./phone2.avif";
 import PhoneImage3 from "./phone3.avif";
 import PhoneImage4 from "./phone4.avif";
+import LoginImage from "./login.avif";    
 export {
   BannerImage,
   Logo,
@@ -51,4 +52,5 @@ export {
   PhoneImage2,
   PhoneImage3,
   PhoneImage4,
+  LoginImage
 };
