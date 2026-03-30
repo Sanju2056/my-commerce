@@ -24,13 +24,16 @@ function App() {
   }, []);
   // console.log(products);
   return (
-    <div className="w-full">
-      <NavBar />
       <BrowserRouter>
-      <ScrollToTop/>
+    <div className="w-full">
+        <NavBar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products" element={<ProductPage products={products}/>} />
+          <Route
+            path="/products"
+            element={<ProductPage products={products} />}
+          />
           {/* <Route path="/products" element={<ProductDetailPage />} /> */}
 
           <Route path="/blog" element={<Blog />} />
@@ -43,9 +46,9 @@ function App() {
 
           {/* <Route path="/product/:id" element={<ProductDetailPage />} /> */}
         </Routes>
-      </BrowserRouter>
       <Footer />
     </div>
+      </BrowserRouter>
   );
 }
 
